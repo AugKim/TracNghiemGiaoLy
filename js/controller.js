@@ -80,6 +80,7 @@ export const QuizController = {
         this.showCurrentQuestion();
         this.startTimer();
         QuizSounds.playStart();
+        QuizSounds.startBackgroundMusic();
     },
 
     startTimer() {
@@ -144,6 +145,7 @@ export const QuizController = {
 
     showResult() {
         this.stopTimer();
+        QuizSounds.stopBackgroundMusic();
         QuizView.showScreen('result');
         const resultInfo = QuizModel.getResultInfo();
         QuizView.renderResult(resultInfo);
@@ -159,6 +161,7 @@ export const QuizController = {
 
     restartQuiz() {
         this.stopTimer();
+        QuizSounds.stopBackgroundMusic();
         QuizView.showScreen('start');
         this.renderStartScreen();
     }

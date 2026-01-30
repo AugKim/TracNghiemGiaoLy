@@ -1025,6 +1025,31 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
         correct: 1
     }
 ];
+
+/** Kho bộ đề: gộp tất cả câu hỏi đã soạn để trích đề ngẫu nhiên */
+const QUESTION_BANK = [
+    ...CAU_HOI_GIAO_LY,
+    ...Trac_Nghiem_Giao_Ly_So_Cap,
+    ...Trac_Nghiem_Giao_Ly_So_Cap_2
+];
+
+/**
+ * Lấy ngẫu nhiên n câu từ kho (không trùng, thứ tự xáo trộn).
+ * @param {Array} bank - Mảng câu hỏi
+ * @param {number} count - Số câu cần lấy
+ * @returns {Array} Mảng câu hỏi (clone để không ảnh hưởng kho)
+ */
+function pickRandomQuestions(bank, count) {
+    if (bank.length === 0) return [];
+    const n = Math.min(count, bank.length);
+    const arr = bank.map(q => ({ ...q, answers: [...(q.answers || [])] }));
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr.slice(0, n);
+}
+
 export const QuizModel = {
     // Danh sách đề thi (mỗi đề có id, name, description, questions)
     /** Thời gian mặc định mỗi đề (giây). 5 phút = 300. Có thể ghi đè theo từng đề bằng timeLimit. */
@@ -1059,6 +1084,30 @@ export const QuizModel = {
             description: '5 câu ôn tập nhanh',
             timeLimit: 120,
             questions: CAU_HOI_GIAO_LY.slice(0, 5)
+        },
+        {
+            id: 'random10',
+            name: '🎲 Đề ngẫu nhiên 10 câu',
+            description: '10 câu trích ngẫu nhiên từ kho đề',
+            type: 'random',
+            count: 10,
+            timeLimit: 300
+        },
+        {
+            id: 'random15',
+            name: '🎲 Đề ngẫu nhiên 15 câu',
+            description: '15 câu trích ngẫu nhiên từ kho đề',
+            type: 'random',
+            count: 15,
+            timeLimit: 420
+        },
+        {
+            id: 'random20',
+            name: '🎲 Đề ngẫu nhiên 20 câu',
+            description: '20 câu trích ngẫu nhiên từ kho đề',
+            type: 'random',
+            count: 20,
+            timeLimit: 600
         }
     ],
 
@@ -1086,11 +1135,12 @@ export const QuizModel = {
     getExams() {
         return this.exams.map(e => {
             const sec = e.timeLimit ?? this.DEFAULT_TIME_LIMIT_SECONDS;
+            const questionCount = e.type === 'random' ? (e.count || 10) : (e.questions?.length ?? 0);
             return {
                 id: e.id,
                 name: e.name,
                 description: e.description,
-                questionCount: e.questions.length,
+                questionCount,
                 timeLimit: sec,
                 timeLabel: this.formatTimeLabel(sec)
             };
@@ -1110,7 +1160,12 @@ export const QuizModel = {
     loadExam(examId) {
         const exam = this.exams.find(e => e.id === examId);
         if (!exam) return false;
-        this.questions = exam.questions;
+        if (exam.type === 'random') {
+            const count = exam.count || 10;
+            this.questions = pickRandomQuestions(QUESTION_BANK, count);
+        } else {
+            this.questions = exam.questions || [];
+        }
         this.state.timeLimitSeconds = exam.timeLimit ?? this.DEFAULT_TIME_LIMIT_SECONDS;
         this.state.remainingSeconds = this.state.timeLimitSeconds;
         return true;

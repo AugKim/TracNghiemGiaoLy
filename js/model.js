@@ -9,7 +9,7 @@ const CAU_HOI_GIAO_LY = [
     { question: "Vì sao mắt chúng ta không thể nhìn thấy Thiên Chúa?", answers: ["Vì Thiên Chúa ở quá xa con người", "Vì Thiên Chúa là Đấng thiêng liêng, không có thân xác", "Vì mắt con người bị che khuất bởi tội lỗi", "Vì Thiên Chúa ẩn mình trong bóng tối"], correct: 1 },
     { question: "Lý trí tự nhiên của con người có thể nhận biết Thiên Chúa qua đâu?", answers: ["Qua giấc mơ và điềm báo", "Qua sách báo và phim ảnh", "Qua thiên nhiên và tiếng nói lương tâm", "Qua sự giàu sang và quyền lực"], correct: 2 },
     { question: "Trong mầu nhiệm Thiên Chúa Ba Ngôi, Chúa Thánh Thần là Ngôi thứ mấy?", answers: ["Ngôi Thứ Nhất", "Ngôi Thứ Hai", "Ngôi Thứ Ba", "Không phân biệt ngôi vị"], correct: 2 },
-    { question: "Chúa Thánh Thần bởi ai mà ra?", answers: ["Chỉ bởi Chúa Cha", "Bởi Chúa Cha và Chúa Con", "Chỉ bởi Chúa Con", "Tự nhiên mà có"], correct: 1 },
+    { question: "Chúa Thánh Thần bởi ai mà ra?", answers: ["Chỉ bởi Chúa Cha", "Bởi Chúa Cha và Chúa Con (Filioque)", "Chỉ bởi Chúa Con", "Tự nhiên mà có"], correct: 1 },
     { question: "Chúa Giêsu đã gọi Chúa Thánh Thần bằng danh hiệu nào?", answers: ["Đấng Tạo Hóa", "Đấng Phán Xét", "Đấng Bảo Trợ", "Vua các Vua"], correct: 2 },
     { question: "Trong Cựu Ước, Chúa Thánh Thần thường được gọi là gì?", answers: ["Thần Khí của Thiên Chúa", "Ngôi Lời Nhập Thể", "Đấng Emmanuel", "Vị Ngôn Sứ vĩ đại"], correct: 0 },
     { question: "Cầu nguyện được định nghĩa là gì?", answers: ["Đọc các kinh thật nhanh và thuộc lòng", "Gặp gỡ và thưa chuyện với Chúa", "Xin Chúa ban cho nhiều tiền bạc", "Suy nghĩ về những lo âu trong cuộc sống"], correct: 1 },
@@ -17,7 +17,7 @@ const CAU_HOI_GIAO_LY = [
     { question: "Tâm tình của Chúa Giêsu khi cầu nguyện trong vườn Cây Dầu là gì?", answers: ["Vui vẻ và hân hoan", "Giận dữ và oán trách", "Khiêm tốn, vâng phục và phó thác", "Sợ hãi và muốn bỏ cuộc"], correct: 2 },
     { question: "Qua tiên tri Isaia, Thiên Chúa khẳng định tình yêu của Ngài đối với con người như thế nào?", answers: ["Yêu thương hơn cả người mẹ yêu con mình", "Yêu thương nhưng có điều kiện", "Yêu thương như một vị vua đối với thần dân", "Chỉ yêu thương những người công chính"], correct: 0 },
     { question: "Thiên Chúa dựng nên trời đất muôn vật để làm gì?", answers: ["Để con người phải sợ hãi quyền năng Chúa", "Để cho con người hưởng dùng", "Để Ngài ngắm nhìn một mình", "Để thử thách lòng tin của con người"], correct: 1 },
-    { question: "Các tín hữu trong Hội Thánh được chia làm mấy thành phần chính?", answers: ["Hai thành phần: Các vị lãnh đạo có chức thánh và giáo dân", "Ba thành phần: Giám mục, Linh mục và Giáo dân", "Bốn thành phần: Giáo hoàng, Giám mục, Linh mục, Tu sĩ", "Chỉ một thành phần duy nhất là con cái Chúa"], correct: 0 },
+    { question: "Trong Hội Thánh có những bậc sống chính nào?", answers: ["Giáo sĩ, tu sĩ (đời sống thánh hiến), và giáo dân", "Ba thành phần: Giám mục, Linh mục và Giáo dân", "Bốn thành phần: Giáo hoàng, Giám mục, Linh mục, Tu sĩ", "Chỉ một thành phần duy nhất là con cái Chúa"], correct: 0 },
     { question: "Ngày Chúa Giêsu trở lại lần thứ hai (cánh chung) sẽ đến như thế nào?", answers: ["Vào một ngày lễ lớn đã định trước", "Được báo trước 3 ngày để chuẩn bị", "Đến cách bất thình lình, không ai biết trước", "Khi con người đã hoàn toàn thánh thiện"], correct: 2 },
     { question: "Để cám ơn Chúa vì Ngài đã tạo dựng muôn vật, chúng ta cần làm gì ngoài việc nói lời cám ơn?", answers: ["Chỉ cần đi lễ ngày Chúa Nhật là đủ", "Làm việc để góp phần bảo vệ và xây dựng trái đất tốt đẹp hơn", "Không cần làm gì thêm vì Chúa không đòi hỏi", "Chỉ cần cầu nguyện xin ơn cho bản thân"], correct: 1 }
 ];
@@ -67,7 +67,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         answers: [
             "Là tội do chính chúng ta phạm phải khi mới sinh ra",
             "Là tội của ông bà tổ tiên truyền lại qua đường máu huyết",
-            "Là tình trạng mất ân nghĩa thánh thiện nguyên thủy do A-đam và E-và phạm",
+            "Là tình trạng mất ân nghĩa thánh thiện nguyên thủy do A-đam và E-và phạm tội",
             "Là mọi tội lỗi con người phạm phải trong suốt cuộc đời"
         ],
         "correct": 2
@@ -136,7 +136,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         question: "Chúa Giêsu lập Bí tích Thánh Thể khi nào?",
         "answers": [
             "Khi Ngài hóa bánh ra nhiều",
-            "Trong bữa Tiệc Ly",
+            "Trong bữa Tiệc Ly (Bữa Tối Sau Hết)",
             "Trên thánh giá",
             "Sau khi phục sinh"
         ],
@@ -157,7 +157,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         "answers": [
             "3 Bí tích",
             "7 Bí tích",
-            "10 Bí tích",
+            "9 Bí tích",
             "12 Bí tích"
         ],
         "correct": 1
@@ -185,7 +185,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
     {
         question: "Điều kiện để rước lễ (chịu Mình Thánh Chúa) là gì?",
         "answers": [
-            "Sạch tội trọng và có ý ngay lành",
+            "Ở trong ơn nghĩa Chúa (không mắc tội trọng), có lòng ngay lành và giữ chay Thánh Thể theo luật Hội Thánh",
             "Phải thuộc hết các kinh",
             "Phải đóng góp cho nhà thờ",
             "Chỉ cần đi lễ đúng giờ"
@@ -218,7 +218,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
             "Các Giám mục",
             "Đức Giáo Hoàng",
             "Các Linh mục",
-            "Hội đồng Giám mục"
+            "Các Hồng Y"
         ],
         "correct": 1
     },
@@ -246,7 +246,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         question: "Luyện ngục là nơi nào?",
         "answers": [
             "Nơi giam giữ các linh hồn tội lỗi đời đời",
-            "Nơi thanh luyện các linh hồn chưa trọn vẹn trước khi vào Thiên đàng",
+            "Nơi thanh luyện các linh hồn trước khi vào Thiên đàng",
             "Nơi dành cho những người không tin Chúa",
             "Nơi ma quỷ cám dỗ con người"
         ],
@@ -296,7 +296,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         question: "Tam Nhật Thánh bao gồm những ngày nào?",
         "answers": [
             "Thứ Hai, Thứ Ba, Thứ Tư Tuần Thánh",
-            "Thứ Năm Tuần Thánh, Thứ Sáu Tuần Thánh, Thứ Bảy Tuần Thánh (Vọng Phục Sinh)",
+            "Bắt đầu từ chiều Thứ Năm Tuần Thánh và kết thúc vào kinh chiều Chúa Nhật Phục Sinh",
             "Lễ Giáng Sinh, Lễ Phục Sinh, Lễ Hiện Xuống",
             "Ba ngày Tết Nguyên Đán"
         ],
@@ -308,7 +308,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
             "Mùa Giáng Sinh và Phục Sinh",
             "Mùa Thường Niên",
             "Mùa Vọng và Mùa Chay",
-            "Các lễ kính các Thánh Tử Đạo"
+            "Mùa Vọng và Phục Sinh"
         ],
         "correct": 2
     },
@@ -326,7 +326,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         question: "Tội trọng là gì?",
         "answers": [
             "Là lỗi nhẹ hàng ngày do yếu đuối",
-            "Là vi phạm điều luật quan trọng, biết rõ là tội nặng, và tự do ưng thuận hoàn toàn",
+            "Là vi phạm điều luật quan trọng, biết rõ là tội nặng và tự do ưng thuận hoàn toàn",
             "Là tội không thể tha thứ được",
             "Là tội do người khác xúi giục"
         ],
@@ -348,7 +348,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
             "Khôn ngoan, Công bình, Dũng cảm",
             "Tin, Cậy, Mến",
             "Khiêm nhường, Nhịn nhục, Bác ái",
-            "Vâng lời, Khó nghèo, Khiết tịnh"
+            "Vâng phục, Khó nghèo, Khiết tịnh"
         ],
         "correct": 1
     },
@@ -385,7 +385,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
     {
         question: "Sự sống lại của thân xác nghĩa là gì?",
         "answers": [
-            "Đầu thai kiếp khác",
+            "Đầu thai kiếp khác (luân hồi)",
             "Linh hồn sống mãi còn thân xác tiêu tan",
             "Trong ngày tận thế, thân xác sẽ sống lại và kết hợp với linh hồn",
             "Sống lại trong ký ức người thân"
@@ -413,7 +413,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         "correct": 1
     },
     {
-        question: "Việc xức dầu Thánh (Dầu Crisma) trong Bí tích Rửa tội có ý nghĩa gì?",
+        question: "Việc xức dầu Thánh (Dầu Chrisma) trong Bí tích Rửa tội có ý nghĩa gì?",
         "answers": [
             "Để chữa lành bệnh tật",
             "Để làm đẹp cho người được rửa tội",
@@ -485,7 +485,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
     {
         question: "Trên Thánh Giá, Chúa Giêsu đã trao phó Mẹ Maria cho ai?",
         "answers": [
-            "Thánh Phêrô",
+            "Thánh Phêrô và Các Tông Đồ",
             "Thánh Gioan Tông đồ",
             "Thánh Ma-ri-a Mác-đa-la",
             "Ông Giô-xép A-ri-ma-thê"
@@ -503,7 +503,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap = [
         "correct": 2
     },
     {
-        question: "Lễ Hiện Xuống kỷ niệm biến cố gì?",
+        question: "Lễ Ngũ Tuần kỷ niệm biến cố gì?",
         "answers": [
             "Chúa Giêsu lên trời",
             "Chúa Thánh Thần ngự xuống trên các Tông đồ",
@@ -537,7 +537,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
     {
         question: "Điều răn thứ năm 'Chớ giết người' cấm những điều gì?",
         answers: [
-            "Cấm giết người, tự tử, phá thai và làm hại sức khỏe",
+            "Cấm giết người, tự tử, phá thai và làm hại sức khỏe (thân thể)",
             "Chỉ cấm giết người bằng vũ khí",
             "Cấm săn bắt động vật",
             "Cấm chặt phá cây cối"
@@ -619,13 +619,13 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
         answers: [
             "Khi giáo dân rước lễ",
             "Khi Linh mục đọc lời Truyền phép",
-            "Khi Linh mục dâng bánh rượu đầu lễ",
+            "Khi Linh mục chuẩn bị lễ vật",
             "Khi ca đoàn hát bài hiệp lễ"
         ],
         correct: 1
     },
     {
-        question: "Mầu nhiệm 'Biến thể' (Transubstantiation) trong Bí tích Thánh Thể nghĩa là gì?",
+        question: "Mầu nhiệm 'Biến đổi bản thể' (Transubstantiation) trong Bí tích Thánh Thể nghĩa là gì?",
         answers: [
             "Bánh và rượu thay đổi hình dạng bên ngoài",
             "Bánh và rượu vẫn giữ nguyên bản chất nhưng mang ý nghĩa mới",
@@ -650,7 +650,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
             "Giáo hoàng, Hồng y, Giám mục",
             "Giám mục, Linh mục, Phó tế",
             "Linh mục, Tu sĩ, Giáo dân",
-            "Lễ sinh, Quới chức, Trùm họ"
+            "Lễ sinh, Ca đoàn, Trùm họ"
         ],
         correct: 1
     },
@@ -660,7 +660,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
             "Để hai người yêu nhau được sống chung hợp pháp",
             "Sự thiện ích của đôi vợ chồng và việc sinh sản, giáo dục con cái",
             "Để duy trì nòi giống cho dòng họ",
-            "Để tổ chức tiệc cưới linh đình"
+            "Để tổ chức tiệc cưới linh đình và đi du lịch"
         ],
         correct: 1
     },
@@ -668,7 +668,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
         question: "Đặc tính căn bản của Hôn nhân Công giáo là gì?",
         answers: [
             "Đơn nhất và Bất khả phân ly (Một vợ một chồng và không được ly dị)",
-            "Có thể ly dị nếu không còn yêu thương",
+            "Đơn nhất và có thể phân ly",
             "Có thể lấy nhiều vợ hoặc chồng",
             "Chỉ là hợp đồng dân sự tạm thời"
         ],
@@ -717,9 +717,9 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
     {
         question: "Màu đỏ trong Phụng vụ được dùng vào những dịp nào?",
         answers: [
-            "Lễ Giáng Sinh và Phục Sinh",
-            "Lễ Chúa Thánh Thần, Lễ Thương Khó và Lễ các Thánh Tử Đạo",
-            "Lễ Đức Mẹ",
+            "Lễ trong mùa Giáng Sinh và Phục Sinh",
+            "Lễ Chúa Thánh Thần, Lễ các Thánh Tử Đạo, ...",
+            "Các Lễ Đức Mẹ",
             "Mùa Thường Niên"
         ],
         correct: 1
@@ -728,7 +728,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
         question: "Màu trắng trong Phụng vụ tượng trưng cho điều gì?",
         answers: [
             "Sự thống hối và buồn bã",
-            "Niềm vui, sự tinh khiết và chiến thắng (Dùng lễ Chúa, Đức Mẹ, các Thánh không tử đạo)",
+            "Niềm vui, sự tinh khiết và chiến thắng (Dùng lễ kính Chúa, Đức Mẹ, ...)",
             "Sự hy sinh đổ máu",
             "Sự hy vọng và sức sống"
         ],
@@ -817,7 +817,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
     {
         question: "Thương người có 14 mối, chia làm hai loại nào?",
         answers: [
-            "Thương xác và Thương hồn",
+            "Thương xác và Thương linh hồn",
             "Thương người già và Thương trẻ em",
             "Thương người nghèo và Thương người bệnh",
             "Thương người trong đạo và Thương người ngoại đạo"
@@ -897,7 +897,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
     {
         question: "Đâu là kinh tin kính được đọc trong Thánh lễ?",
         answers: [
-            "Kinh Tin Kính của các Tông Đồ hoặc Kinh Tin Kính Nixêa-Cốt-tan-ti-nô",
+            "Kinh Tin Kính các Tông Đồ hoặc Kinh Tin Kính Nixêa Công-tan-ti-nô",
             "Kinh Lạy Nữ Vương",
             "Kinh Cám Ơn",
             "Kinh Vực Sâu"
@@ -927,7 +927,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
     {
         question: "Việc 'Lần hạt Mân Côi' có nguồn gốc từ việc gì?",
         answers: [
-            "Đọc 150 Thánh Vịnh",
+            "Từ truyền thống đọc 150 Thánh Vịnh; người bình dân thay thế bằng chuỗi kinh (đặc biệt là Kính Mừng)",
             "Đọc 150 kinh Lạy Cha",
             "Đọc 150 lời nguyện tự phát",
             "Đọc sách Khải Huyền"
@@ -935,7 +935,7 @@ const Trac_Nghiem_Giao_Ly_So_Cap_2 = [
         correct: 0
     },
     {
-        question: "Công đồng chung (Công đồng đạiumenic) gần đây nhất là công đồng nào?",
+        question: "Công đồng chung (đại kết) (ecumenical council) gần đây nhất là công đồng nào?",
         answers: [
             "Công đồng Trentô",
             "Công đồng Vatican I",
@@ -1042,14 +1042,14 @@ export const QuizModel = {
             id: 'de2',
             name: 'Đề 2 - Trắc Nghiệm Giáo Lý Sơ Cấp',
             description: '50 câu ôn tập nhanh',
-            timeLimit: 600,
+            timeLimit: 720,
             questions: Trac_Nghiem_Giao_Ly_So_Cap
         },
 {
             id: 'de3',
             name: 'Đề 3 - Trắc Nghiệm Giáo Lý Sơ Cấp 2',
             description: '5 câu ôn tập nhanh',
-            timeLimit: 120,
+            timeLimit: 720,
             questions: Trac_Nghiem_Giao_Ly_So_Cap_2
         }
 ,
